@@ -17,70 +17,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tvz-PS-TKn">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cw9-s0-Ai5">
                                 <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F2-zb-tuV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-aZ-r8A">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="59" width="42" height="21"/>
+                                    <rect key="frame" x="37" y="60" width="327" height="81"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLq-nO-WM5">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="24" y="269" width="33" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pZ-jP-vVw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb3-pG-LbV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="24" y="205" width="33" height="30"/>
+                                    <rect key="frame" x="37" y="242" width="105" height="41"/>
                                 </variation>
+                                <connections>
+                                    <action selector="myButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pgd-4h-4Pm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXq-Zp-Eub">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="299" width="131" height="41"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stoppedButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9ga-it-DEV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tvz-PS-TKn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="E8o-EV-SBB"/>
-                            <constraint firstItem="Tvz-PS-TKn" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="zgC-4c-vat"/>
-                            <constraint firstItem="Tvz-PS-TKn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="123" id="zrB-uP-I3c"/>
+                            <constraint firstItem="cw9-s0-Ai5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="7" id="Xcb-qN-rWa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cw9-s0-Ai5" secondAttribute="trailing" constant="15" id="abK-WA-s5g"/>
+                            <constraint firstItem="cw9-s0-Ai5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="170" id="f1b-Xr-LrT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Tvz-PS-TKn"/>
-                                <exclude reference="7F2-zb-tuV"/>
-                                <exclude reference="CLq-nO-WM5"/>
-                                <exclude reference="1pZ-jP-vVw"/>
+                                <exclude reference="cw9-s0-Ai5"/>
+                                <exclude reference="cEH-aZ-r8A"/>
+                                <exclude reference="cb3-pG-LbV"/>
+                                <exclude reference="QXq-Zp-Eub"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="E8o-EV-SBB"/>
-                                <exclude reference="zgC-4c-vat"/>
-                                <exclude reference="zrB-uP-I3c"/>
+                                <exclude reference="Xcb-qN-rWa"/>
+                                <exclude reference="abK-WA-s5g"/>
+                                <exclude reference="f1b-Xr-LrT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Tvz-PS-TKn"/>
-                                <include reference="7F2-zb-tuV"/>
-                                <include reference="CLq-nO-WM5"/>
-                                <include reference="1pZ-jP-vVw"/>
+                                <include reference="cw9-s0-Ai5"/>
+                                <include reference="cEH-aZ-r8A"/>
+                                <include reference="cb3-pG-LbV"/>
+                                <include reference="QXq-Zp-Eub"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="E8o-EV-SBB"/>
-                                <include reference="zgC-4c-vat"/>
-                                <include reference="zrB-uP-I3c"/>
+                                <include reference="Xcb-qN-rWa"/>
+                                <include reference="abK-WA-s5g"/>
+                                <include reference="f1b-Xr-LrT"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="cEH-aZ-r8A" id="KL7-rg-a8J"/>
+                        <outlet property="myProgressView" destination="cw9-s0-Ai5" id="KD5-1R-M1I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
